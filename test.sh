@@ -1,0 +1,1 @@
+echo $EFS_DNS
