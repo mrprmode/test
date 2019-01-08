@@ -7,8 +7,7 @@ echo $divider_line
 echo " Seeding Knowledge Network | Takes about 5 minutes "
 echo $divider_line
 sleep 2
-ssh -t master "sudo ls -la /home/ubuntu/efs/$(sudo ls /home/ubuntu/efs/ | grep networks)/"
-# ssh -t master "sudo aws s3 cp --recursive s3://KnowNets/KN-20rep-1706/userKN-20rep-1706/ /home/ubuntu/efs/$(sudo ls /home/ubuntu/efs/ | grep networks)/"
+ssh -t master "sudo aws s3 cp --recursive s3://KnowNets/KN-20rep-1706/userKN-20rep-1706/ /home/ubuntu/efs/\$(sudo ls /home/ubuntu/efs/ | grep networks)/"
 if [ $? -eq 0 ]
 	then
 	echo
